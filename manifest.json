@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Duo Pickup Watcher",
+  "version": "0.1.0",
+  "description": "Watches the iPhone Duo product page you have open and alerts you when a nearby Apple Store shows pickup availability.",
+  "permissions": ["notifications", "storage", "alarms"],
+  "host_permissions": ["https://ntfy.sh/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.apple.com/shop/buy-iphone/iphone-duo/*"],
+      "js": ["hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://www.apple.com/shop/buy-iphone/iphone-duo/*"],
+      "js": ["parse.js", "schedule.js", "models.js", "history.js", "notify.js", "watcher.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": { "128": "icon.png" }
+}

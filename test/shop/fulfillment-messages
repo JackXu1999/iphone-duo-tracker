@@ -1,0 +1,3 @@
+{"head":{"status":"200"},"body":{"content":{"pickupMessage":{"stores":[
+{"storeName":"Fifth Avenue","city":"New York","partsAvailability":{"MK1F4LL/A":{"pickupDisplay":"unavailable","pickupSearchQuote":"Currently unavailable"}}},
+{"storeName":"SoHo","city":"New York","partsAvailability":{"MK1F4LL/A":{"pickupDisplay":"available","pickupSearchQuote":"Available<br>Today"}}}]}}}}

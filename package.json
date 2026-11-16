@@ -1,0 +1,11 @@
+{
+  "name": "duo-pickup-watcher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension that alerts you when a nearby Apple Store shows iPhone Duo pickup availability.",
+  "license": "MIT",
+  "scripts": {
+    "test": "for f in test/*.test.js; do echo \"$f\"; node \"$f\" || exit 1; done"
+  },
+  "engines": { "node": ">=18" }
+}

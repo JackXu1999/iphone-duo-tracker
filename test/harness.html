@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><title>Duo watcher harness</title>
+<script>
+  window.__sent = [];
+  window.chrome = {
+    // Optional starting storage: localStorage.duoHarnessSeed = JSON.stringify({ history: [...] })
+    storage: { local: { _d: Object.assign({ intervalMin: 3 }, JSON.parse(localStorage.getItem("duoHarnessSeed") || "{}")), get(d, cb) { cb({ ...d, ...this._d }); }, set(p) { Object.assign(this._d, p); } } },
+    runtime: { sendMessage(m) { window.__sent.push(m); } },
+  };
+</script>
+<script src="../hook.js"></script>
+<script src="../parse.js"></script>
+<script src="../schedule.js"></script>
+<script src="../models.js"></script>
+<script src="../history.js"></script>
+<script src="../notify.js"></script>
+<script src="../watcher.js"></script>
+<body><h1>Fake product page</h1></body>
